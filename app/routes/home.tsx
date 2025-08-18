@@ -1,4 +1,4 @@
-import Navber from "~/components/Navber";
+import Navbar from "~/components/Navbar";
 import type { Route } from "./+types/home";
 import { resumes } from "constants";
 import ResumeCard from "~/components/ResumeCard";
@@ -13,7 +13,7 @@ export function meta({}: Route.MetaArgs) {
 export default function Home() {
   return (
     <main className="bg-[url('/images/bg-main.svg')] bg-cover">
-      <Navber />
+      <Navbar />
       <section className="main-section">
         <div className="page-heading py-16">
           <h1>Track Your Application & Resume Ratings</h1>
