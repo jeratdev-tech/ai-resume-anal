@@ -3,7 +3,7 @@ import type { Route } from "./+types/home";
 import { resumes } from ".";
 import ResumeCard from "~/components/ResumeCard";
 import { useEffect } from "react";
-import { useLocation, useNavigate } from "react-router";
+import { useNavigate } from "react-router";
 import { usePuterStore } from "~/lib/puter";
 
 export function meta({}: Route.MetaArgs) {
@@ -15,8 +15,6 @@ export function meta({}: Route.MetaArgs) {
 
 export default function Home() {
   const { auth } = usePuterStore();
-  const location = useLocation();
-  const next = location.search.split("next=")[1];
   const navigate = useNavigate();
 
   useEffect(() => {
